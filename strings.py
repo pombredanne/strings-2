@@ -42,9 +42,8 @@ def redact(s, words_to_redact, redact_word="REDACTED"):
     return result
 
 
-# TODO: Move to a stronger hashing algorithm
 def get_default_string_hash(s):
-    h = hashlib.sha256(s)
+    h = hashlib.sha512(s)
 
     return h.hexdigest()
 
